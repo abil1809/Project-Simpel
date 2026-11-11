@@ -144,3 +144,19 @@ button:active {
   font-size: 0.9rem;
   border-top: 1px solid var(--border);
 }
+
+/* ===== Efek pesta ===== */
+.emoji-fall {
+  position: fixed;
+  top: -2rem;
+  font-size: 2rem;
+  pointer-events: none;
+  animation: fall 2.5s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.6;
+  }
+}

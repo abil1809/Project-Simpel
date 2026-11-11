@@ -44,3 +44,19 @@ counterBtn.addEventListener("click", () => {
   count++;
   counterEl.textContent = count;
 });
+
+// ===== 4. Tombol pesta (emoji berjatuhan) =====
+const partyBtn = document.getElementById("party-btn");
+const emojis = ["🎉", "🎊", "✨", "🥳", "🌟"];
+
+partyBtn.addEventListener("click", () => {
+  for (let i = 0; i < 20; i++) {
+    const el = document.createElement("span");
+    el.className = "emoji-fall";
+    el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    el.style.left = Math.random() * 100 + "vw";
+    el.style.animationDelay = Math.random() * 0.8 + "s";
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 3500);
+  }
+});
