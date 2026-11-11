@@ -28,6 +28,8 @@ const gitTips = [
   "Jangan pernah commit password, API key, atau file rahasia.",
   "`git log --oneline` menampilkan riwayat commit dengan ringkas.",
   "Salah commit? Tenang, hampir semua hal di Git bisa diperbaiki.",
+  "Push sering-sering: commit yang sudah di GitHub aman dari laptop rusak.",
+  "Cek `git diff` sebelum commit untuk memastikan hanya perubahan yang kamu maksud.",
 ];
 
 tipBtn.addEventListener("click", () => {
