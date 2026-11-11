@@ -1,0 +1,146 @@
+/* ===== Variabel warna (mudah diganti tema) ===== */
+:root {
+  --bg: #f7f8fc;
+  --text: #1f2430;
+  --muted: #5d6578;
+  --card: #ffffff;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --accent: #f97316;
+  --border: #e3e6ef;
+}
+
+[data-theme="dark"] {
+  --bg: #12141c;
+  --text: #eceff7;
+  --muted: #9aa3b8;
+  --card: #1c2030;
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+  --accent: #fb923c;
+  --border: #2a3044;
+}
+
+/* ===== Reset & dasar ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ===== Hero ===== */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  gap: 1.25rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.15;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.subtitle {
+  max-width: 480px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* ===== Tombol ===== */
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid transparent;
+  transition: transform 0.15s, background 0.2s;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn-secondary:hover {
+  border-color: var(--primary);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+  padding: 0.5rem 0.9rem;
+}
+
+/* ===== Kotak tips ===== */
+.tip-box {
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  max-width: 520px;
+  color: var(--muted);
+  min-height: 3.5rem;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
