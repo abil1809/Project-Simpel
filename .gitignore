@@ -1,0 +1,16 @@
+# File sistem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Pengaturan editor
+.vscode/
+.idea/
+
+# Rahasia (jangan pernah di-commit)
+.env
+.env.*
+
+# Dependensi & log (berjaga-jaga kalau nanti pakai npm)
+node_modules/
+*.log
